@@ -10,6 +10,21 @@ $('.menu').on('click', function(){
   }
 });
 
+$("#ViewMore02").click(function() {
+  var link = $(this);
+  var content = $('.moreview02');
+
+  content.animate({ height: 'toggle' });
+  
+  if (link.text() === 'Ver mas del Ciclo 01-2020') {
+    link.text('Ver menos del Ciclo 01-2020');
+    content.css('display', 'block');
+  } else {
+    link.text('Ver mas del Ciclo 01-2020');
+    content.css('height', '0%');
+  }
+
+});
 
 $("#ViewMore").click(function() {
   var link = $(this);

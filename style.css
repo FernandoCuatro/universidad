@@ -67,21 +67,24 @@ html, body {
 .band-inner {
  display: table-cell;
  vertical-align: middle;
- padding: 3em 0 4em;
+ padding: 0px;
 }
 .band-a {
- background: #69D2E7;
+ background-color: #ffffff; 
 }
 .band-b {
  background: #F9D423;
 }
 .band-c {
- background: #F38630;
+ background: #38b000;
 }
 .band-d {
  background: #FF4E50;
 }
 .band-e {
+ background: #77183a;
+}
+.band-f {
  background: #fff;
 }
 .nav {
@@ -134,12 +137,16 @@ html, body {
  height: 24px;
  cursor: pointer;
  z-index: 10;
+ background-color: #ffff00;
 }
 .menu:hover .menu-hamburger:before, .menu:hover .menu-hamburger:after {
  width: 24px;
 }
 .menu.is-active .menu-hamburger {
  background: none;
+}
+.menu.is-active {
+ position: fixed;
 }
 .menu.is-active .menu-hamburger:before, .menu.is-active .menu-hamburger:after {
  top: 0;
@@ -163,7 +170,7 @@ html, body {
  width: 24px;
  height: 4px;
  margin: 10px 0;
- background: #fff;
+ background: #000;
  border-radius: 4px;
  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -172,7 +179,7 @@ html, body {
  display: block;
  width: 24px;
  height: 4px;
- background: #fff;
+ background: #000;
  position: absolute;
  border-radius: 4px;
  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -212,8 +219,8 @@ html, body {
   padding: 0 1em;
  }
 }
-/* ======================================== */
 
+/* ======================================== */
 .u-clearfix:before, .u-clearfix:after {
  content: " ";
  display: table;
@@ -228,20 +235,17 @@ html, body {
  color: #aaa;
 }
 .card-container {
- margin: 25px auto 0;
+ margin: 0px auto 0;
  position: relative;
- width: 70%;
+ width: 100%;
 }
 .card {
- background-color: #fff;
- padding: 20px;
+ padding: 30px;
  position: relative;
- box-shadow: 0 0 5px rgba(75, 75, 75, .07);
  z-index: 1;
 }
 .card-body {
  display: inline-block;
- float: left;
  width: 50%;
 }
 .card-number {
@@ -249,23 +253,27 @@ html, body {
 }
 .card-author {
  display: block;
- font-size: 12px;
+ font-size: .8em;
  letter-spacing: .5px;
- margin: 15px 0 0;
+ margin: 15px 0;
  text-transform: uppercase;
+ color: #77183a;
+ font-weight: bold;
 }
 .card-title {
- font-family: 'Cormorant Garamond', serif;
- font-size: 3.0em;
- font-weight: 300;
+ font-size: 2.3em;
  line-height: 60px;
- margin: 10px 0;
+ padding: 5px 0;
+ text-transform: uppercase;
+ color: #77183a;
 }
 .card-description {
- display: inline-block;
- font-weight: 300;
+ font-size: .9em;
+ display: block;
+ font-weight: bold;
  line-height: 22px;
- margin: 10px 0;
+ margin: 15px 0;
+ color: #77183a;
 }
 .card-read {
  cursor: pointer;
@@ -277,32 +285,34 @@ html, body {
  text-transform: uppercase;
 }
 .card-tag {
- float: right;
- margin: 2px 0 0;
+ text-align: left;
 }
 .card-media {
  float: right;
  width: 35%;
- box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 1), 0 0 0 0 rgba(0, 0, 0, 1), 0 0 0 0 rgba(0, 0, 0, .25);
-}
-.card-shadow {
- background-color: #fff;
- box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
- height: 1px;
- margin: -1px auto 0;
- width: 80%;
- z-index: -1;
 }
 a.external {
- color: #aaa;
+ color: #77183a;
+ display: block;
  text-decoration: none;
- font-size: 0.8em;
+ font-size: 0.9em;
 }
 @media only screen and (max-width: 480px) {
  .card-media {
   margin-top: 210px;
  }
 }
+div.logo_u img{
+ width: 125%; 
+ margin: 0px auto; 
+ display: block;
+}
+@media only screen and (max-width: 480px) {
+ div.logo_u img{
+  width: 215%; 
+ }
+}
+
 /* ====================================== */
 
 .rwd-table {
@@ -480,7 +490,7 @@ h1.herotext {
  padding: 0 0 14px 0;
  font-size: var(--font-size-default);
  line-height: 1.5;
- color: var(--color-green);
+ color: #77183a;
  font-weight: 600;
  white-space: nowrap;
  overflow: visible;
@@ -529,7 +539,7 @@ h1.herotext {
  bottom: -2px;
  left: -50%;
  z-index: 2;
- border-bottom: 2px solid var(--color-green);
+ border-bottom: 2px solid  #7a7878;
 }
 .progress-bar li:last-child span {
  width: 200%;
@@ -542,11 +552,12 @@ h1.herotext {
  left: -100%;
 }
 .progress-bar .is-complete:before {
- background-color: var(--color-green);
+ background-color: #77183a;
+ border: 2px solid  #7a7878;
 }
 .progress-bar .is-active:before, .progress-bar li:hover:before, .progress-bar .is-hovered:before {
- background-color: var(--color-white);
- border-color: var(--color-green);
+ background-color: #77183a;
+ border-color:  #fff;
 }
 .progress-bar li:hover:before, .progress-bar .is-hovered:before {
  transform: scale(1.33);
@@ -590,6 +601,14 @@ div.progreso {
 .moreview {
  display: none;
 }
+
+#ViewMore02 {
+ cursor: pointer;
+}
+.moreview02 {
+ display: none;
+}
+
 /* ========================== */
 
 .carddocument {
@@ -626,6 +645,9 @@ a.documenthref {
 }
 /* ================================================ */
 
+.trip-detail-gallery {
+ margin-bottom: 20px;
+}
 @media (min-width: 1050px) {
  .trip-detail-gallery {
   display: grid;
@@ -695,7 +717,7 @@ a.documenthref {
 }
 #lightgallery>div img {
  transition: transform 0.15s ease 0s;
- -webkit-transform: scale3d(1, 1, 1);
+ /* -webkit-transform: scale3d(1, 1, 1); */
 }
 #lightgallery>div:hover img {
  -webkit-transform: scale3d(1.1, 1.1, 1.1);
