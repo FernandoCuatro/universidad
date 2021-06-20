@@ -1,3 +1,12 @@
+/*
+ * Banco de colores
+ * Paleta 1: #FF595E, #FFCA3A, #8AC926, #1982C4, #6A4C93;
+ * Paleta 2: #9B5DE5, #F15BB5, #FEE440, #00BBF9, #00F5D4;
+ * Paleta 3: #390099, #9E0059, #FF0054, #FF5400, #FFBD00;
+ * Paleta 4: #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF;
+ * Banco de colores
+*/
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
 html, body {
@@ -86,6 +95,9 @@ html, body {
 }
 .band-f {
  background: #fff;
+}
+.band-g {
+ background: #3A86FF;
 }
 .nav {
  width: 180px;
@@ -609,6 +621,17 @@ div.progreso {
  display: none;
 }
 
+#ViewMore03 {
+ cursor: pointer;
+}
+.moreview03 {
+ display: none;
+}
+
+
+
+
+
 /* ========================== */
 
 .carddocument {
@@ -710,65 +733,11 @@ a.documenthref {
   cursor: grabbing;
  }
 }
-#lightgallery>div {
- position: relative;
- cursor: pointer;
- overflow: hidden;
-}
-#lightgallery>div img {
- transition: transform 0.15s ease 0s;
- /* -webkit-transform: scale3d(1, 1, 1); */
-}
-#lightgallery>div:hover img {
- -webkit-transform: scale3d(1.1, 1.1, 1.1);
- transform: scale3d(1.1, 1.1, 1.1);
-}
-#lightgallery>div:before {
- content: "";
- bottom: 0;
- left: 0;
- position: absolute;
- right: 0;
- top: 0;
- z-index: 1;
- -webkit-transition: background-color 0.15s ease 0s;
- transition: background-color 0.15s ease 0s;
-}
-#lightgallery>div:hover:before {
- background-color: rgba(0, 0, 0, 0.5);
-}
-#lightgallery>div:after {
- content: "";
- width: 20px;
- height: 20px;
- background: url('../img/zoom.png') no-repeat center center;
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- margin: auto;
- opacity: 0;
- z-index: 2;
- -webkit-transition: opacity 0.3s ease 0s;
- transition: opacity 0.3s ease 0s;
-}
-#lightgallery>div:hover:after {
- opacity: 1;
-}
-.lg-outer .lg-thumb {
- margin: auto;
-}
-@media (max-width: 949.99px) {
- #lightgallery>div {
-  overflow: visible;
- }
- #lightgallery>div:hover img {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
- }
- #lightgallery>div:before {
-  width: calc(100% - 5px);
-  right: auto;
- }
+
+div.anio {
+  background-color: #000;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+  cursor: pointer;
 }

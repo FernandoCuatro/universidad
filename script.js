@@ -1,5 +1,3 @@
-
-
 $('.menu').on('click', function(){
   if ($('.l-site').hasClass('is-open')) {
     $('.menu').removeClass('is-active');
@@ -10,28 +8,41 @@ $('.menu').on('click', function(){
   }
 });
 
+// Cambiar cada una de las funciones de Jquery con el id y la clase
+// #ViewMore02+++ | .moreview02+++
+$("#ViewMore03").click(function() {
+  var link = $(this);
+  var content = $('.moreview03');
+
+  content.animate({ height: 'toggle' });
+  
+  if (link.text() === 'Ver mas del Ciclo 01-2021') {
+    link.text('Ver menos del Ciclo 01-2021');
+    content.css('display', 'block');
+  } else {
+    link.text('Ver mas del Ciclo 01-2021');
+    content.css('height', '0%');
+  }
+
+});
+
+// 2020
 $("#ViewMore02").click(function() {
   var link = $(this);
   var content = $('.moreview02');
-
   content.animate({ height: 'toggle' });
-  
-  if (link.text() === 'Ver mas del Ciclo 01-2020') {
-    link.text('Ver menos del Ciclo 01-2020');
+  if (link.text() === 'Ver mas del Ciclo 02-2020') {
+    link.text('Ver menos del Ciclo 02-2020');
     content.css('display', 'block');
   } else {
-    link.text('Ver mas del Ciclo 01-2020');
+    link.text('Ver mas del Ciclo 02-2020');
     content.css('height', '0%');
   }
-
 });
-
 $("#ViewMore").click(function() {
   var link = $(this);
   var content = $('.moreview');
-
   content.animate({ height: 'toggle' });
-  
   if (link.text() === 'Ver mas del Ciclo 01-2020') {
     link.text('Ver menos del Ciclo 01-2020');
     content.css('display', 'block');
@@ -39,11 +50,20 @@ $("#ViewMore").click(function() {
     link.text('Ver mas del Ciclo 01-2020');
     content.css('height', '0%');
   }
-
 });
 
-lightGallery(document.getElementById('lightgallery'), {
-    thumbnail: true
+// Para cada anio
+$(".anio").click(function() {
+  var link = $('#estado-2020');
+  var content = $('#2020');
+  content.animate({ height: 'toggle' });
+  if (link.text() === '2020 +') {
+    link.text('2020 -');
+    content.css('display', 'block');
+  } else {
+    link.text('2020 +');
+    content.css('height', '0%');
+  }
 });
 
 $(document).ready(function() {
@@ -59,4 +79,3 @@ $(document).ready(function() {
     return false;
   });
 });
-
