@@ -78,8 +78,12 @@ html, body {
  vertical-align: middle;
  padding: 0px;
 }
+
+/* ======================================== */
+/* Colores para los fondos de las sections */
+
 .band-a {
- background-color: #ffffff; 
+ background-color: #ffffff;
 }
 .band-b {
  background: #F9D423;
@@ -99,6 +103,10 @@ html, body {
 .band-g {
  background: #3A86FF;
 }
+.band-h {
+ background: #9E0059; 
+}
+
 .nav {
  width: 180px;
  position: fixed;
@@ -231,8 +239,8 @@ html, body {
   padding: 0 1em;
  }
 }
-
 /* ======================================== */
+
 .u-clearfix:before, .u-clearfix:after {
  content: " ";
  display: table;
@@ -314,17 +322,16 @@ a.external {
   margin-top: 210px;
  }
 }
-div.logo_u img{
- width: 125%; 
- margin: 0px auto; 
+div.logo_u img {
+ width: 125%;
+ margin: 0px auto;
  display: block;
 }
 @media only screen and (max-width: 480px) {
- div.logo_u img{
-  width: 215%; 
+ div.logo_u img {
+  width: 215%;
  }
 }
-
 /* ====================================== */
 
 .rwd-table {
@@ -473,6 +480,7 @@ h1.herotext {
  color: #34495E;
  margin-top: 2.0rem;
 }
+
 /* ================================================= */
 
 :root {
@@ -551,7 +559,7 @@ h1.herotext {
  bottom: -2px;
  left: -50%;
  z-index: 2;
- border-bottom: 2px solid  #7a7878;
+ border-bottom: 2px solid #7a7878;
 }
 .progress-bar li:last-child span {
  width: 200%;
@@ -565,11 +573,11 @@ h1.herotext {
 }
 .progress-bar .is-complete:before {
  background-color: #77183a;
- border: 2px solid  #7a7878;
+ border: 2px solid #7a7878;
 }
 .progress-bar .is-active:before, .progress-bar li:hover:before, .progress-bar .is-hovered:before {
  background-color: #77183a;
- border-color:  #fff;
+ border-color: #fff;
 }
 .progress-bar li:hover:before, .progress-bar .is-hovered:before {
  transform: scale(1.33);
@@ -596,6 +604,7 @@ h1.herotext {
  bottom: -20px;
  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%208%208%22%3E%3Cpath%20fill%3D%22%23ed1c24%22%20d%3D%22M4%200l4%208H0z%22%2F%3E%3C%2Fsvg%3E');
 }
+
 /* =============================== */
 
 div.progreso {
@@ -605,6 +614,7 @@ div.progreso {
  max-width: 65%;
  padding: 3em 0;
 }
+
 /* =================================== */
 
 #ViewMore {
@@ -613,24 +623,24 @@ div.progreso {
 .moreview {
  display: none;
 }
-
 #ViewMore02 {
  cursor: pointer;
 }
 .moreview02 {
  display: none;
 }
-
 #ViewMore03 {
  cursor: pointer;
 }
 .moreview03 {
  display: none;
 }
-
-
-
-
+#ViewMore04 {
+ cursor: pointer;
+}
+.ViewMore04 {
+ display: none;
+}
 
 /* ========================== */
 
@@ -666,6 +676,7 @@ a.documenthref {
  display: block;
  border-radius: 0px 0px .4em .4em;
 }
+
 /* ================================================ */
 
 .trip-detail-gallery {
@@ -733,11 +744,10 @@ a.documenthref {
   cursor: grabbing;
  }
 }
-
 div.anio {
-  background-color: #000;
-  color: #fff;
-  padding: 1px;
-  text-align: center;
-  cursor: pointer;
+ background-color: #000;
+ color: #fff;
+ padding: 1px;
+ text-align: center;
+ cursor: pointer;
 }
