@@ -1,10 +1,12 @@
 /*
  * Banco de colores
- * Paleta 1: #FF595E, #FFCA3A, #8AC926, #1982C4, #6A4C93;
+ * Paleta 1: #FF595E, , #8AC926, #1982C4, #6A4C93;
  * Paleta 2: #9B5DE5, #F15BB5, #FEE440, #00BBF9, #00F5D4;
- * Paleta 3: #390099, #9E0059, #FF0054, #FF5400, #FFBD00;
- * Paleta 4: #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF;
+ * Paleta 3: #390099, , #FF0054, #FF5400, #FFBD00;
+ * Paleta 4: #FFBE0B, #FB5607, #FF006E, #8338EC, ;
  * Banco de colores
+ * Para interciclos: #ffffff;
+ * Ya usados: #F9D423, #38b000, #FF4E50, #77183a, #3A86FF, #9E0059, #FFCA3A; 
 */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
@@ -98,7 +100,7 @@ html, body {
  background: #77183a;
 }
 .band-f {
- background: #fff;
+ background: #ffffff;
 }
 .band-g {
  background: #3A86FF;
@@ -106,6 +108,11 @@ html, body {
 .band-h {
  background: #9E0059; 
 }
+.band-i {
+ background: #FF595E; 
+}
+
+
 
 .nav {
  width: 180px;
@@ -641,6 +648,13 @@ div.progreso {
 .ViewMore04 {
  display: none;
 }
+#ViewMore05 {
+ cursor: pointer;
+}
+.ViewMore05 {
+ display: none;
+}
+
 
 /* ========================== */
 
@@ -744,10 +758,26 @@ a.documenthref {
   cursor: grabbing;
  }
 }
-div.anio {
+
+div.anio, div.anio-2 {
  background-color: #000;
  color: #fff;
  padding: 1px;
  text-align: center;
  cursor: pointer;
+}
+
+div.separador-anios {
+ border-bottom: 5px solid #77183a;
+}
+
+p.cum-general {
+ padding: 10px;
+ color: #77183a;
+ font-size: .9em;
+ font-weight: bold;
+}
+
+p.cum-general span {
+ font-size: 2em;
 }

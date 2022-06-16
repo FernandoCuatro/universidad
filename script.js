@@ -7,8 +7,26 @@ $('.menu').on('click', function() {
   $('.l-site').addClass('is-open');
  }
 });
+
 // Cambiar cada una de las funciones de Jquery con el id y la clase
 // #ViewMore02+++ | .moreview02+++
+
+// 2022
+$("#ViewMore05").click(function() {
+ var link = $(this);
+ var content = $('.ViewMore05');
+ content.animate({
+  height: 'toggle'
+ });
+ if (link.text() === 'Ver mas del Ciclo 01-2022') {
+  link.text('Ver menos del Ciclo 01-2022');
+  content.css('display', 'block');
+ } else {
+  link.text('Ver mas del Ciclo 01-2022');
+  content.css('height', '0%');
+ }
+});
+
 
 // 2021
 $("#ViewMore04").click(function() {
@@ -88,6 +106,26 @@ $(".anio").click(function() {
  }
 });
 
+$(".anio-2").click(function() {
+ var link = $('#estado-2021');
+ var content = $('#2021');
+ var separador = $('.separador-anios');
+ content.animate({
+  height: 'toggle'
+ });
+ if (link.text() === '2021 +') {
+  link.text('2021 -');
+  content.css('display', 'block');
+  separador.css('border-bottom', 'none');
+ } else {
+  link.text('2021 +');
+  content.css('height', '0%');
+  separador.css('border-bottom', '5px solid #77183a');
+ }
+});
+
+
+// Efecto para el desplazamiento por las anclas de los id
 $(document).ready(function() {
  $('a[href^="#"]').click(function() {
   var destino = $(this.hash);
