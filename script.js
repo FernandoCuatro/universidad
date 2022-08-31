@@ -1,3 +1,16 @@
+// menu de navegacion
+$(function(){
+    $('.box-menu .wrapper').on('click', function(){
+        $('.box-menu').toggleClass('full-menu');
+        $('.hamburger').toggleClass('active');
+    });
+    $('a').on('click', function(){
+        $(this).siblings('a').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+// fin menu de navegacion
+
 $('.menu').on('click', function() {
  if ($('.l-site').hasClass('is-open')) {
   $('.menu').removeClass('is-active');
