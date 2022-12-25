@@ -40,6 +40,21 @@ $("#ViewMore05").click(function() {
  }
 });
 
+$("#ViewMore06").click(function() {
+ var link = $(this);
+ var content = $('.ViewMore06');
+ content.animate({
+  height: 'toggle'
+ });
+ if (link.text() === 'Ver mas del Ciclo 02-2022') {
+  link.text('Ver menos del Ciclo 02-2022');
+  content.css('display', 'block');
+ } else {
+  link.text('Ver mas del Ciclo 02-2022');
+  content.css('height', '0%');
+ }
+});
+
 
 // 2021
 $("#ViewMore04").click(function() {
