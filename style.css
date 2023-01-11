@@ -19,7 +19,7 @@ html, body {
 
 .l-site {
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 100%;
 	position: relative;
 	z-index: 1;
 }
