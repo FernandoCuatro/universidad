@@ -24,6 +24,22 @@ $('.menu').on('click', function() {
 // Cambiar cada una de las funciones de Jquery con el id y la clase
 // #ViewMore02+++ | .moreview02+++
 
+// 2023
+$("#ViewMore07").click(function() {
+ var link = $(this);
+ var content = $('.ViewMore07');
+ content.animate({
+  height: 'toggle'
+ });
+ if (link.text() === 'Ver mas del Ciclo 01-2023') {
+  link.text('Ver menos del Ciclo 01-2023');
+  content.css('display', 'block');
+ } else {
+  link.text('Ver mas del Ciclo 01-2023');
+  content.css('height', '0%');
+ }
+});
+
 // 2022
 $("#ViewMore05").click(function() {
  var link = $(this);
@@ -147,6 +163,24 @@ $(".anio-2").click(function() {
   separador.css('border-bottom', 'none');
  } else {
   link.text('2021 +');
+  content.css('height', '0%');
+  separador.css('border-bottom', '5px solid #77183a');
+ }
+});
+
+$(".anio-3").click(function() {
+ var link = $('#estado-2022');
+ var content = $('#2022');
+ var separador = $('.separador-anios');
+ content.animate({
+  height: 'toggle'
+ });
+ if (link.text() === '2022 +') {
+  link.text('2022 -');
+  content.css('display', 'block');
+  separador.css('border-bottom', 'none');
+ } else {
+  link.text('2022 +');
   content.css('height', '0%');
   separador.css('border-bottom', '5px solid #77183a');
  }

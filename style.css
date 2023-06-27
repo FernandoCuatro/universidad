@@ -19,7 +19,7 @@ html, body {
 
 .l-site {
 	margin: 0 auto;
-	max-width: 100%;
+	/*max-width: 1600px;*/
 	position: relative;
 	z-index: 1;
 }
@@ -273,7 +273,9 @@ html, body {
 	background: #FFBD00;
 }
 
-
+.band-k {
+	background: #00BBF9;
+}
 
 
 @media screen and (max-width:980px) {
@@ -784,6 +786,14 @@ div.progreso {
 	display: none;
 }
 
+#ViewMore07 {
+	cursor: pointer;
+}
+
+.ViewMore07 {
+	display: none;
+}
+
 /* ========================== */
 .carddocument {
 	background: #fff;
@@ -904,7 +914,7 @@ a.documenthref {
 
 }
 
-div.anio, div.anio-2 {
+div.anio, div.anio-2, div.anio-3, div.anio-4, div.anio-5 {
 	background-color: #000;
 	color: #fff;
 	padding: 1px;
