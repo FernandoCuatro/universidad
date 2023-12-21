@@ -6,7 +6,7 @@
  * Paleta 4: #FFBE0B, #FB5607, #FF006E, #8338EC, ;
  * Banco de colores
  * Para interciclos: #ffffff;
- * Ya usados: #F9D423, #38b000, #FF4E50, #77183a, #3A86FF, #9E0059, #FFCA3A, #FFBD00; 
+ * Ya usados: #F9D423, #38b000, #FF4E50, #77183a, #3A86FF, #9E0059, #FFCA3A, #FFBD00, #8AC926; 
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
 
@@ -277,6 +277,9 @@ html, body {
 	background: #00BBF9;
 }
 
+.band-l {
+	background: #8AC926;
+}
 
 @media screen and (max-width:980px) {
 	.l-page {
@@ -318,6 +321,10 @@ html, body {
 	padding: 30px;
 	position: relative;
 	z-index: 1;
+}
+
+.card img {
+	border-radius: 20px;
 }
 
 .card-body {
@@ -530,6 +537,7 @@ p.cum {
 	letter-spacing: .5px;
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
 }
 
 a.vmas {
@@ -792,6 +800,10 @@ div.progreso {
 
 .ViewMore07 {
 	display: none;
+}
+
+.ViewMore08 {
+	/*display: none;*/
 }
 
 /* ========================== */
