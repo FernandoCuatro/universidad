@@ -1,1 +1,1 @@
-Informacion acerca de la universidad
+Información acerca de la universidad
