@@ -43,7 +43,7 @@
           <div class="band-inner">
             <div class="card-container">
               <div class="card u-clearfix">
-                <div class="card-body">
+                <div class="card-body" style="background-color: red;">
                   <div class="logo_u">
                     <img src="images/assets/logo.png" alt="Universidad" />
                   </div>
@@ -92,61 +92,7 @@
         </div>
       </section>
 
-		<!-- ============================================ -->
-		<!-- DATOS PARA EL AÑO 2023 -->
-		<!-- ============================================ -->
-		<section id="2023"></section>
-		<script>
-			fetch('ciclos/2023.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('2023').innerHTML = data;
-				})
-				.catch(error => console.error('Error al cargar el archivo:', error));
-		</script>
 
-		<!-- ============================================ -->
-		<!-- DATOS PARA EL AÑO 2022 -->
-		<!-- ============================================ -->
-		<div class="anio-3 separador-anios" id="header-2022"><h1 id="estado-2022">2022 +</h1></div>
-		<section id="2022" style="display: none;"></section>
-		<script>
-			fetch('ciclos/2022.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('2022').innerHTML = data;
-				})
-				.catch(error => console.error('Error al cargar el archivo:', error));
-		</script>
-
-
-		<!-- ============================================ -->
-		<!-- DATOS PARA EL AÑO 2021 -->
-		<!-- ============================================ -->
-		<div class="anio-2 separador-anios" id="header-2021"><h1 id="estado-2021">2021 +</h1></div>
-		<section id="2021" style="display: none;"></section>
-		<script>
-			fetch('ciclos/2021.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('2021').innerHTML = data;
-				})
-				.catch(error => console.error('Error al cargar el archivo:', error));
-		</script>
-	  
-		<!-- ============================================ -->
-		<!-- DATOS PARA EL AÑO 2020 -->
-		<!-- ============================================ -->
-		<div class="anio" id="header-2020"><h1 id="estado-2020">2020 +</h1></div>
-		<section id="2020" style="display: none;"></section>
-		<script>
-			fetch('ciclos/2020.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('2020').innerHTML = data;
-				})
-				.catch(error => console.error('Error al cargar el archivo:', error));
-		</script>
 
     </div>
   </div>
