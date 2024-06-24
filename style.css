@@ -324,7 +324,7 @@ html, body {
 }
 
 .card img {
-	border-radius: 20px;
+	/* border-radius: 20px; */
 }
 
 .card-body {
@@ -378,8 +378,8 @@ html, body {
 }
 
 .card-media {
-	float: right;
-	width: 35%;
+	/* float: right;
+	width: 35%; */
 }
 
 a.external {
