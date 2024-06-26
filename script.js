@@ -11,6 +11,28 @@ $(function(){
 });
 // fin menu de navegacion
 
+
+// Función para quitar la clase is-active del último li 
+function ajustarProgressBar() {
+    var progressBar = document.getElementById('progress-bar');
+    if (window.matchMedia('(max-width: 480px)').matches) {
+        var items = progressBar.querySelectorAll('li.is-complete');
+        for (var i = 0; i < items.length - 1; i++) {
+        items[i].classList.remove('is-active');
+        }
+    } else {
+        progressBar.querySelectorAll('li.is-complete').forEach(function(item) {
+        item.classList.add('is-active');
+        });
+    }
+}
+
+// Ejecutar la función al cargar la página y al redimensionar la ventana
+window.onload = function() {
+    ajustarProgressBar();
+    window.addEventListener('resize', ajustarProgressBar);
+};
+
 $('.menu').on('click', function() {
  if ($('.l-site').hasClass('is-open')) {
   $('.menu').removeClass('is-active');
@@ -221,3 +243,7 @@ $(document).ready(function() {
   return false;
  });
 });
+
+
+
+  

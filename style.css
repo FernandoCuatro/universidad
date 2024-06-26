@@ -32,7 +32,6 @@ html, body {
 	bottom: 0;
 	width: 50%;
 	display: block;
-	background: #3a4043;
 	z-index: 1;
 }
 
@@ -101,7 +100,7 @@ html, body {
 }
 
 .full-menu {
-	height: 420px;
+	height: 465px;
 }
 
 .wrapper {
@@ -347,11 +346,11 @@ html, body {
 }
 
 .card-title {
-	font-size: 2.3em;
+	/* font-size: 2.3em;
 	line-height: 60px;
 	padding: 5px 0;
 	text-transform: uppercase;
-	color: #77183a;
+	color: #77183a; */
 }
 
 .card-description {
@@ -680,7 +679,7 @@ h1.herotext {
 	bottom: -2px;
 	left: -50%;
 	z-index: 2;
-	border-bottom: 2px solid #7a7878;
+	border-bottom: 2px solid #00e612;
 }
 
 .progress-bar li:last-child span {
@@ -696,12 +695,12 @@ h1.herotext {
 }
 
 .progress-bar .is-complete:before {
-	background-color: #77183a;
-	border: 2px solid #7a7878;
+	background-color: #fff;
+	border: 2px solid #fff;
 }
 
 .progress-bar .is-active:before, .progress-bar li:hover:before, .progress-bar .is-hovered:before {
-	background-color: #77183a;
+	background-color: #fff;
 	border-color: #fff;
 }
 
@@ -741,8 +740,8 @@ div.progreso {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	max-width: 65%;
-	padding: 3em 0;
+	max-width: 90%;
+	padding: 2em 0;
 }
 
 /* =================================== */
