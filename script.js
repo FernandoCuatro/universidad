@@ -54,56 +54,54 @@ window.onload = function() {
 };
 
 
-  // Función para animar el scroll
-  function animateScroll(element, targetScroll, duration) {
+// Función para animar el scroll
+function animateScroll(element, targetScroll, duration) {
     let start       = element.scrollLeft;
     let currentTime = 0;
     let increment   = 20;
 
     function animateScrollLoop(timestamp) {
-      currentTime += increment;
-      const val   =  Math.easeInOutQuad(currentTime, start, targetScroll - start, duration);
-      element.scrollLeft = val;
-      if (currentTime < duration) {
-        requestAnimationFrame(animateScrollLoop);
-      }
+        currentTime += increment;
+        const val   =  Math.easeInOutQuad(currentTime, start, targetScroll - start, duration);
+        element.scrollLeft = val;
+        if (currentTime < duration) {
+            requestAnimationFrame(animateScrollLoop);
+        }
     }
 
     animateScrollLoop();
-  }
+}
 
-  // Función para hacer scroll hacia la derecha y luego volver al inicio
-  function scrollAndReset(scrollContainer) {
-    animateScroll(scrollContainer, 50000, 2000);
-    
-    // Esperar un momento antes de regresar al inicio
+// Función para hacer scroll hacia la derecha y luego volver al inicio
+function scrollAndReset(scrollContainer) {
+    animateScroll(scrollContainer, document.getElementById("scrollContainer").offsetWidth * 10, 2000);
+
     setTimeout(() => {
-      animateScroll(scrollContainer, 150, 2000);
-    }, 2000 + 100); // Ajustar el tiempo para asegurar que la animación se haya completado
-  }
-  
-  
-  // Función para la curva de aceleración y desaceleración (ease-in-out)
-  Math.easeInOutQuad = function (t, b, c, d) {
+        animateScroll(scrollContainer, 150, 2000);
+    }, 2500);
+}
+
+// Función para la curva de aceleración y desaceleración (ease-in-out)
+Math.easeInOutQuad = function (t, b, c, d) {
     t /= d / 2;
     if (t < 1) return c / 2 * t * t + b;
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
-  };
+};
 
-  // Utilizamos IntersectionObserver para detectar cuando el contenedor está en pantalla
-  const scrollContainer = document.getElementById('scrollContainer');
-  let observer = new IntersectionObserver(entries => {
+// Utilizamos IntersectionObserver para detectar cuando el contenedor está en pantalla
+const scrollContainer = document.getElementById('scrollContainer');
+let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Cuando el contenedor está en pantalla, ejecutamos la animación
-        scrollAndReset(scrollContainer);
-        observer.unobserve(entry.target); // Dejamos de observar una vez ejecutado
-      }
+        if (entry.isIntersecting) {
+            scrollAndReset(scrollContainer);
+            // Dejamos de observar una vez ejecutado
+            observer.unobserve(entry.target); 
+        }
     });
-  });
+});
 
-  observer.observe(scrollContainer);
+observer.observe(scrollContainer);
 
 
 
