@@ -124,171 +124,261 @@
         <!-- FIN LINEA DE TIEMPO -->
 
         <!-- CARD DE CICLOS -->
-        <section class="band" style="padding: 1em 1em 0 1em;">
-            <div style="display: flex; width: 100%; overflow-x: auto; white-space: nowrap;">
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+        <section class="band" style="padding: 1em;">
+            <div class="scroll-container" id="scrollContainer" style="display: flex; width: 100%; overflow-x: auto; white-space: nowrap; scroll-behavior: smooth;">
+
+                <!-- pre -->
+                <a href="#" id="pre" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #FFF;">
+                        <div class="date" style="font-size: 12px; color: #cccccc; margin-bottom: 10px; padding: 20px 20px 0px 20px;">2024 - 2025</div>
+                        <div style="display: flex; width: 100%; text-align: center; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #cccccc; width: 100%;">Pre Especialización</h2>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
-                    </div>
-                </div>
+                        
+                        <svg style="width: 70px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#CCCCCC" stroke="#CCCCCC" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#CCCCCC" stroke="#CCCCCC" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#CCCCCC" stroke="#CCCCCC" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
 
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                        <div class="footer" style="display: flex; width: 100%; align-items: center; padding: 0px 0px 20px 2px; justify-content: center;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #cccccc; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MOD1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #cccccc; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MOD2</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #cccccc; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MOD3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #cccccc; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MOD4</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #cccccc; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">+6</div>
+                            </div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                <!-- 2024-01 -->
+                <a href="#" id="2024-01" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #f0e4fb;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2024 - Junio 2024</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2024-01</h2>
+                            <div class="time-left" style="background-color: #9B5DE5; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">8.6</div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO XI</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #9B5DE5; width: 100%; border-radius: 5px;"></div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9B5DE5; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ETP3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9B5DE5; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ETP4</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9B5DE5; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">FEPS</div>
+                            </div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
                     </div>
-                </div>
+                </a>
 
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                <!-- 2023-02 -->
+                <a href="#" id="2023-02" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #c8f7dd;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2023 - Diciembre 2023</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2023-02</h2>
+                            <div class="time-left" style="background-color: #35c471; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">9.7</div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO VIII</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #35c471; width: 100%; border-radius: 5px;"></div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
-                    </div>
-                </div>
-
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">EPRO</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ETP1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ETP2</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">SIOP</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ING2</div>
+                            </div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
                     </div>
-                </div>
+                </a>
 
-
-                <div class="card" style="width: 200px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e0f7fa;">
-                    <div class="date" style="font-size: 12px; color: #888; margin-bottom: 10px;">July 10, 2020</div>
-                    <h2 style="margin: 0; font-size: 18px; color: #333;">Dashboard</h2>
-                    <p style="margin: 5px 0 15px; color: #555; font-size: 14px;">Medical</p>
-                    <div class="progress-bar" style="width: 100%; height: 10px; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-                        <div class="progress" style="height: 100%; background-color: #4caf50; width: 50%; border-radius: 5px;"></div>
-                    </div>
-                    <div class="progress-text" style="font-size: 14px; color: #555; margin-bottom: 10px;">50%</div>
-                    <div class="footer" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                        <div class="avatars" style="display: flex;">
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 5px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT1</div>
-                            <div class="avatar-text" style="width: 24px; height: 24px; border-radius: 50%; margin-right: -8px; border: 2px solid #fff; background-color: #4caf50; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">MAT2</div>
+                <!-- 2023-01 -->
+                <a href="#" id="2023-01" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e6eaff;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2023 - Julio 2023</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2023-01</h2>
+                            <div class="time-left" style="background-color: #1966e1; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">9.2</div>
                         </div>
-                        <div class="time-left" style="background-color: rgba(0, 0, 0, 0.1); padding: 5px 10px; border-radius: 15px; font-size: 12px; color: #555;">2 weeks left</div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO VII / INTERCICLO</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #1966e1; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ADCC</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">SINF</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ELE1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ING1</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
 
+                <!-- 2022-02 -->
+                <a href="#" id="2022-02" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe99c;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2022 - Diciembre 2022</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2022-02</h2>
+                            <div class="time-left" style="background-color: #ff932e; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #34495E;">8.6</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO VI</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #ff932e; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ASEM</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">IACI</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MATF</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">PROG4</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">RED2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 2022-01 -->
+                <a href="#" id="2022-01" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe5e3;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2022 - Julio 2022</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2022-01</h2>
+                            <div class="time-left" style="background-color: #ff9691; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #34495E;">9.2</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO V / INTERCICLO</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #ff595f; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff9691; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">OCOM</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff9691; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">RED1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff9691; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">FIS3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff9691; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">PROG3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff9691; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
+                <!-- 2021-02 -->
+                <a href="#" id="2021-02" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #f2d9e1;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2021 - Diciembre 2021</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2021-02</h2>
+                            <div class="time-left" style="background-color: #9e0059; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">9.3</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO IV</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #9e0059; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9e0059; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">EXOE</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9e0059; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">CAL3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9e0059; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">DPWEB</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9e0059; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">FIS2</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #9e0059; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">PROG2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
+                <!-- 2021-01 -->
+                <a href="#" id="2021-01" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e6eaff;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2021 - Julio 2021</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2021-01</h2>
+                            <div class="time-left" style="background-color: #1966e1; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">9.2</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO III / INTERCICLO</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #1966e1; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">AYDS</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">BAS2</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">FIS1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MAT3</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #1966e1; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
+                <!-- 2020-02 -->
+                <a href="#" id="2020-02" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #c8f7dd;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2020 - Diciembre 2020</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2020-02</h2>
+                            <div class="time-left" style="background-color: #35c471; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #FFF;">9.2</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO II</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #35c471; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">BAS1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">DIBT</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">EPRO</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MAT2</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #35c471; color: #FFF; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">PROE</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-
-
-
+                <!-- 2020-01 -->
+                <a href="#" id="2020-01" style="text-decoration: none; margin: 10px 20px;">
+                    <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe99c;">
+                        <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2020 - Julio 2020</div>
+                        <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
+                            <h2 style="margin: 0; font-size: 18px; color: #34495E;">2020-01</h2>
+                            <div class="time-left" style="background-color: #ff932e; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: bold; color: #34495E;">9.0</div>
+                        </div>
+                        
+                        <p style="margin: 5px 0 5px; color: #34495E; font-size: 14px; padding: 0 20px;">CICLO I / INTERCICLO</p>
+                        <div class="progress-bar" style="width: 100%; height: 10px; padding: 0px 20px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+                            <div class="progress" style="height: 100%; background-color: #ff932e; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div class="progress-text" style="font-size: 14px; color: #34495E; margin-bottom: 10px; padding: 0 20px;">100%</div>
+                        <div class="footer" style="display: flex; justify-content: center; width: 100%; align-items: center; padding: 0px 0px 20px 2px;">
+                            <div class="avatars" style="display: flex;">
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ALG1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">MAT1</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">ORTI</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">STC</div>
+                                <div class="avatar-text" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 2px; background-color: #ff932e; color: #34495E; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.5em;">REA</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
 
 
@@ -298,7 +388,6 @@
 
         </section>
         <!-- FIN CARD DE CICLOS -->
-        
 
 
     </div>

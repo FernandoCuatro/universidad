@@ -1,5 +1,5 @@
 // menu de navegacion
-$(function(){
+$(function() {
     $('.box-menu .wrapper').on('click', function(){
         $('.box-menu').toggleClass('full-menu');
         $('.hamburger').toggleClass('active');
@@ -32,6 +32,66 @@ window.onload = function() {
     ajustarProgressBar();
     window.addEventListener('resize', ajustarProgressBar);
 };
+
+
+  // Función para animar el scroll
+  function animateScroll(element, targetScroll, duration) {
+    let start = element.scrollLeft;
+    let currentTime = 0;
+    let increment = 20;
+
+    function animateScrollLoop(timestamp) {
+      currentTime += increment;
+      const val = Math.easeInOutQuad(currentTime, start, targetScroll - start, duration);
+      element.scrollLeft = val;
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScrollLoop);
+      }
+    }
+
+    animateScrollLoop();
+  }
+
+  // Función para hacer scroll hacia la derecha y luego volver al inicio
+  function scrollAndReset(container) {
+    const scrollDistance = container.scrollWidth - container.clientWidth; // Distancia total a hacer scroll
+    const animationDuration = 2000; // Duración de la animación en milisegundos
+    animateScroll(container, scrollDistance, animationDuration);
+    
+    // Esperamos un momento para luego regresar al inicio
+    setTimeout(() => {
+      animateScroll(container, 0, animationDuration);
+    }, animationDuration);
+  }
+
+  // Función para la curva de aceleración y desaceleración (ease-in-out)
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  };
+
+  // Utilizamos IntersectionObserver para detectar cuando el contenedor está en pantalla
+  const scrollContainer = document.getElementById('scrollContainer');
+  let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Cuando el contenedor está en pantalla, ejecutamos la animación
+        scrollAndReset(scrollContainer);
+        observer.unobserve(entry.target); // Dejamos de observar una vez ejecutado
+      }
+    });
+  });
+
+  observer.observe(scrollContainer);
+
+
+
+
+
+
+
 
 $('.menu').on('click', function() {
  if ($('.l-site').hasClass('is-open')) {
