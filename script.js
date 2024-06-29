@@ -75,16 +75,13 @@ window.onload = function() {
   console.log();
 
   // Función para hacer scroll hacia la derecha y luego volver al inicio
-  function scrollAndReset(containerId) {
-    const scrollDistance    = 13000; // Obtener el ancho total del contenedor
-    const animationDuration = 2000; // Duración de la animación en milisegundos
-  
-    animateScroll(scrollContainer, scrollDistance, animationDuration);
+  function scrollAndReset(scrollContainer) {
+    animateScroll(scrollContainer, 15000, 2000);
     
     // Esperar un momento antes de regresar al inicio
     setTimeout(() => {
-      animateScroll(scrollContainer, 0, animationDuration);
-    }, animationDuration + 100); // Ajustar el tiempo para asegurar que la animación se haya completado
+      animateScroll(scrollContainer, 0, 2000);
+    }, 2000 + 100); // Ajustar el tiempo para asegurar que la animación se haya completado
   }
   
   
