@@ -74,7 +74,7 @@ window.onload = function() {
 
   // Función para hacer scroll hacia la derecha y luego volver al inicio
   function scrollAndReset(container) {
-    const scrollDistance = container.scrollWidth - container.offsetWidth; // Usamos offsetWidth para obtener el ancho total del contenedor
+    const scrollDistance    = 3000; // Usamos offsetWidth para obtener el ancho total del contenedor
     const animationDuration = 2000; // Duración de la animación en milisegundos
     animateScroll(container, scrollDistance, animationDuration);
     
