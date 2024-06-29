@@ -60,8 +60,6 @@ window.onload = function() {
     let currentTime = 0;
     let increment   = 20;
 
-    console.log(element.scrollLeft);
-
     function animateScrollLoop(timestamp) {
       currentTime += increment;
       const val   =  Math.easeInOutQuad(currentTime, start, targetScroll - start, duration);
@@ -76,11 +74,11 @@ window.onload = function() {
 
   // Función para hacer scroll hacia la derecha y luego volver al inicio
   function scrollAndReset(scrollContainer) {
-    animateScroll(scrollContainer, 30000, 2000);
+    animateScroll(scrollContainer, 50000, 2000);
     
     // Esperar un momento antes de regresar al inicio
     setTimeout(() => {
-      animateScroll(scrollContainer, 250, 2000);
+      animateScroll(scrollContainer, 150, 2000);
     }, 2000 + 100); // Ajustar el tiempo para asegurar que la animación se haya completado
   }
   
