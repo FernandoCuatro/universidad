@@ -1,3 +1,24 @@
+// Efecto para el desplazamiento por las anclas de los id
+$(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+        var destino = $(this.hash);
+
+        if (destino.length == 0) {
+            destino = $('a[name="' + this.hash.substr(1) + '"]');
+        }
+
+        if (destino.length == 0) {
+        destino = $('html');
+        }
+
+        $('html, body').animate({
+            scrollTop: destino.offset().top
+        }, 500);
+        
+        return false;
+    });
+});
+
 // menu de navegacion
 $(function() {
     $('.box-menu .wrapper').on('click', function(){
@@ -92,147 +113,201 @@ window.onload = function() {
 
 
 
-
+// Valiudacion en el menu para actualizar la clase activa
 $('.menu').on('click', function() {
- if ($('.l-site').hasClass('is-open')) {
-  $('.menu').removeClass('is-active');
-  $('.l-site').removeClass('is-open');
- } else {
-  $('.menu').addClass('is-active');
-  $('.l-site').addClass('is-open');
- }
+    if ($('.l-site').hasClass('is-open')) {
+        $('.menu').removeClass('is-active');
+        $('.l-site').removeClass('is-open');
+    } else {
+        $('.menu').addClass('is-active');
+        $('.l-site').addClass('is-open');
+    }
 });
 
 // Cambiar cada una de las funciones de Jquery con el id y la clase
 // #ViewMore02+++ | .moreview02+++
 
+// 2024
+$("#ViewMore09").click(function() {
+    var link    = $(this);
+    var content = $('.ViewMore09');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 01-2024') {
+        link.text('Ver menos del Ciclo 01-2024');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 01-2024');
+        content.css('height', '0%');
+    }
+});
+// fin 2024
+
 // 2023
-$("#ViewMore07").click(function() {
- var link = $(this);
- var content = $('.ViewMore07');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 01-2023') {
-  link.text('Ver menos del Ciclo 01-2023');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 01-2023');
-  content.css('height', '0%');
- }
-});
-
 $("#ViewMore08").click(function() {
- var link = $(this);
- var content = $('.ViewMore08');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 02-2023') {
-  link.text('Ver menos del Ciclo 02-2023');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 02-2023');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.ViewMore08');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 02-2023') {
+        link.text('Ver menos del Ciclo 02-2023');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 02-2023');
+        content.css('height', '0%');
+    }
 });
 
-
+$("#ViewMore07").click(function() {
+    var link    = $(this);
+    var content = $('.ViewMore07');
+    
+    content.animate({
+        height: 'toggle'
+    });
+    
+    if (link.text() === 'Ver mas del Ciclo 01-2023') {
+        link.text('Ver menos del Ciclo 01-2023');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 01-2023');
+        content.css('height', '0%');
+    }
+});
+// fin 2023
 
 
 // 2022
 $("#ViewMore05").click(function() {
- var link = $(this);
- var content = $('.ViewMore05');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 01-2022') {
-  link.text('Ver menos del Ciclo 01-2022');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 01-2022');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.ViewMore05');
+
+    content.animate({
+        height: 'toggle'
+    });
+    
+    if (link.text() === 'Ver mas del Ciclo 01-2022') {
+        link.text('Ver menos del Ciclo 01-2022');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 01-2022');
+        content.css('height', '0%');
+    }
 });
 
 $("#ViewMore06").click(function() {
- var link = $(this);
- var content = $('.ViewMore06');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 02-2022') {
-  link.text('Ver menos del Ciclo 02-2022');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 02-2022');
-  content.css('height', '0%');
- }
-});
+    var link    = $(this);
+    var content = $('.ViewMore06');
 
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 02-2022') {
+        link.text('Ver menos del Ciclo 02-2022');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 02-2022');
+        content.css('height', '0%');
+    }
+});
+// fin 2022
 
 // 2021
 $("#ViewMore04").click(function() {
- var link = $(this);
- var content = $('.ViewMore04');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 02-2021') {
-  link.text('Ver menos del Ciclo 02-2021');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 02-2021');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.ViewMore04');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 02-2021') {
+        link.text('Ver menos del Ciclo 02-2021');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 02-2021');
+        content.css('height', '0%');
+    }
 });
 
 $("#ViewMore03").click(function() {
- var link = $(this);
- var content = $('.moreview03');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 01-2021') {
-  link.text('Ver menos del Ciclo 01-2021');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 01-2021');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.moreview03');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 01-2021') {
+        link.text('Ver menos del Ciclo 01-2021');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 01-2021');
+        content.css('height', '0%');
+    }
 });
+// fin 2021
 
 // 2020
 $("#ViewMore02").click(function() {
- var link = $(this);
- var content = $('.moreview02');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 02-2020') {
-  link.text('Ver menos del Ciclo 02-2020');
-  content.css('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 02-2020');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.moreview02');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 02-2020') {
+        link.text('Ver menos del Ciclo 02-2020');
+        content.css('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 02-2020');
+        content.css('height', '0%');
+    }
 });
 
 $("#ViewMore").click(function() {
- var link = $(this);
- var content = $('.moreview');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === 'Ver mas del Ciclo 01-2020') {
-  link.text('Ver menos del Ciclo 01-2020');
-  content.csHighlighters('display', 'block');
- } else {
-  link.text('Ver mas del Ciclo 01-2020');
-  content.css('height', '0%');
- }
+    var link    = $(this);
+    var content = $('.moreview');
+
+    content.animate({
+        height: 'toggle'
+    });
+
+    if (link.text() === 'Ver mas del Ciclo 01-2020') {
+        link.text('Ver menos del Ciclo 01-2020');
+        content.csHighlighters('display', 'block');
+    } else {
+        link.text('Ver mas del Ciclo 01-2020');
+        content.css('height', '0%');
+    }
 });
+// fin 2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Para cada anio
 $(".anio").click(function() {
@@ -287,22 +362,6 @@ $(".anio-3").click(function() {
 });
 
 
-// Efecto para el desplazamiento por las anclas de los id
-$(document).ready(function() {
- $('a[href^="#"]').click(function() {
-  var destino = $(this.hash);
-  if (destino.length == 0) {
-   destino = $('a[name="' + this.hash.substr(1) + '"]');
-  }
-  if (destino.length == 0) {
-   destino = $('html');
-  }
-  $('html, body').animate({
-   scrollTop: destino.offset().top
-  }, 500);
-  return false;
- });
-});
 
 
 

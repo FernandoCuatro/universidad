@@ -280,6 +280,10 @@ html, body {
 	background: #8AC926;
 }
 
+.band-m {
+	background: #9B5DE5;
+}
+
 @media screen and (max-width:980px) {
 	.l-page {
 		margin-left: 0;
@@ -802,6 +806,10 @@ div.progreso {
 }
 
 .ViewMore08 {
+	display: none;
+}
+
+.ViewMore09 {
 	display: none;
 }
 
