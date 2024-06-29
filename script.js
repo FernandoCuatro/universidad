@@ -72,20 +72,22 @@ window.onload = function() {
     animateScrollLoop();
   }
   
-  console.log(document.getElementById('scrollContainer').scrollWidth);
+  console.log();
 
   // Función para hacer scroll hacia la derecha y luego volver al inicio
-  function scrollAndReset(container) {
-    const scrollDistance    = document.getElementById('scrollContainer').scrollWidth; // Usamos offsetWidth para obtener el ancho total del contenedor
+  function scrollAndReset(containerId) {
+    const scrollDistance    = 5000; // Obtener el ancho total del contenedor
     const animationDuration = 2000; // Duración de la animación en milisegundos
-    animateScroll(container, scrollDistance, animationDuration);
+  
+    animateScroll(scrollContainer, scrollDistance, animationDuration);
     
-    // Esperamos un momento para luego regresar al inicio
+    // Esperar un momento antes de regresar al inicio
     setTimeout(() => {
-      animateScroll(container, 0, animationDuration);
-    }, animationDuration);
+      animateScroll(scrollContainer, 0, animationDuration);
+    }, animationDuration + 100); // Ajustar el tiempo para asegurar que la animación se haya completado
   }
-
+  
+  
   // Función para la curva de aceleración y desaceleración (ease-in-out)
   Math.easeInOutQuad = function (t, b, c, d) {
     t /= d / 2;
