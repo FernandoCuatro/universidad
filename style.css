@@ -693,6 +693,10 @@ h1.herotext {
 	border-color: #fff;
 }
 
+.is-active span {
+	color: #fff;
+}
+
 .progress-bar li:hover:before, .progress-bar .is-hovered:before {
 	transform: scale(1.33);
 }
@@ -725,7 +729,7 @@ h1.herotext {
 }
 
 /* =============================== */
-div.progreso {
+.progreso {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -814,7 +818,6 @@ div.progreso {
 		width: 12%;
 		border-radius: .4em;
 	}
-
 }
 
 h3.documenthero {
@@ -935,6 +938,9 @@ p.cum-general {
 	color: #77183a;
 	font-size: .9em;
 	font-weight: bold;
+	text-align: right;
+	color: #fff;
+	padding: 0px;
 }
 
 p.cum-general span {
@@ -957,17 +963,16 @@ p.cum-general span {
 }
 /* Fin botón para ordenar los ciclos */
 
-
-
+/* Botón de Scroll */
 #boton-scroll {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	/* display: none; Empieza oculto */
+	display: none;
 	z-index: 1000;
-  }
-  
-  #boton-scroll a {
+}
+
+#boton-scroll a {
 	display: flex;
 	padding: 10px;
 	background-color: #77183a;
@@ -976,9 +981,206 @@ p.cum-general span {
 	border-radius: 50%;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 	transition: 0.3s ease;
-  }
-  
-  #boton-scroll a:hover {
+}
+
+#boton-scroll a:hover {
 	background-color: #34495e;
-  }
-  
+}
+/* Fin botón de Scroll */
+
+
+.contenido-centrado {
+	text-align: center;
+}
+
+#contenedor-logo-universidad img {
+	width: 55%;
+}
+
+#contenedor-hero {
+	display: flex;
+}
+
+.contenedores-hero {
+	width: 50%;
+}
+
+@media only screen and (max-width:480px) {
+	#contenedor-logo-universidad img {
+		width: 75%;
+		margin-bottom: 10px;
+	}
+
+	.hero-contenido {
+		padding: 30px 0px;
+	}
+
+	#con-apoyo {
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	#contenedor-hero {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.contenedores-hero {
+		width: 100%;
+	}	
+}
+
+#imagen-perfil img {
+	width: 35%;
+	border-radius: 50%;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+#textos-descripcion {
+	margin-top: 20px;
+}
+
+#informacion-carnet {
+	font-size: 1em;
+	color: #77183a;
+	font-weight: bold;
+	text-align: center;
+}
+
+.informacion-personal {
+	font-size: 0.9em !important;
+	color: #77183a !important;
+	font-weight: bold !important;
+	margin-top: 5px !important;
+	text-align: center;
+}
+
+#con-apoyo {
+	font-size: 0.8em;
+	color: #77183a;
+	font-weight: bold;
+	margin-top: 5px;
+	text-align: center;
+	margin-bottom: 3px;
+}
+
+#apoyo img {
+	width: 40%; border-radius: 12px; box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
+}
+
+#gracias {
+	text-transform: uppercase;
+	color: #77183a;
+	text-align: center;
+	margin-top: 5px;
+}
+
+#contenedor-cards {
+	display: flex;
+	width: 100%;
+	height: 120px;
+}
+
+.card-enlace {
+	flex: 1;
+	height: 20px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#img-portafolio {
+	width: 95%;
+	border-radius: 10px 10px 0px 0px;
+	height: 99px;
+	object-fit: cover;
+}
+
+.img-pensums {
+	width: 95%;
+	border-radius: 10px 10px 0px 0px;
+	height: 99px;
+	object-fit: cover;
+	border-top: 1px solid #77183a;
+	border-right: 1px solid #77183a;
+	border-left: 1px solid #77183a;
+}
+
+.card-descripcion {
+	display: flex;
+	justify-content: center;
+}
+
+.card-descripcion p {
+	width: 95%;
+	background-color: #77183a;
+	font-size: 0.6em;
+	padding: 5px 0px;
+	margin-top: -4px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+#contenedor-card-ciclos {
+	padding: 1em 0px;
+}
+
+#sort {
+	display: flex;
+	justify-content: end;
+	margin: 0px 1em;
+}
+
+.scroll-container {
+	display: flex;
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+}
+
+.scroll-container a {
+	text-decoration: none;
+	margin: 10px 15px;
+}
+
+.card-desabilitada {
+	pointer-events: none;
+}
+
+.card-ciclo {
+	width: 200px;
+	padding: 0px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-color-0 {
+	background-color: #FFF;
+}
+
+.card-color-1 {
+	background-color: #ffe99c;
+}
+
+.card-color-2 {
+	background-color: #f0e4fb;
+}
+
+.card-color-3 {
+	background-color: #c8f7dd;
+}
+
+.card-color-4 {
+	background-color: #e6eaff;
+}
+
+.card-color-5 {
+	background-color: #ffe5e3;
+}
+
+.card-color-6 {
+	background-color: #f2d9e1;
+}

@@ -508,7 +508,7 @@ $('#2020-02').click(function(event) {
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();
-    $('#header-2020').slideUp();
+    $('#header-2021').slideUp();
     
     var content = $('#header-2020');
     if (content.is(':hidden')) {
@@ -525,7 +525,6 @@ $('#2020-02').click(function(event) {
             .catch(error => console.error('Error al cargar el archivo:', error));
     }
 });
-
 // fin enlaces para 2020
 // ============================================
 
@@ -550,14 +549,40 @@ function ordenarCiclos() {
     // Reordenar los enlaces dentro del div
     var scrollContainer = document.getElementById('scrollContainer');
     var children = Array.from(scrollContainer.children);
-    children.reverse(); // Invertir el orden de los elementos
+    // Invertir el orden de los elementos
+    children.reverse(); 
     children.forEach(function(child) {
-        scrollContainer.appendChild(child); // Mover cada elemento al final del contenedor
+        scrollContainer.appendChild(child);
     });
 
     // Actualizar el estado del botón
     cambiarEstado = !cambiarEstado;
 }
 
-// Evento clic al botón
 document.getElementById('ordenarButton').addEventListener('click', ordenarCiclos);
+// ============================================
+
+// ============================================
+// Botón de Scroll
+document.addEventListener("DOMContentLoaded", function() {
+    var botonScroll = document.getElementById('boton-scroll');
+
+    window.addEventListener('scroll', function() {
+        // Calcula la posición del botón de scroll
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        // Calcula el 80% del alto de la página
+        var scrollTrigger = 0.8 * (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+        // Calcula el 80% del alto de la página
+        var scrollTrigger = document.documentElement.clientHeight;
+
+        // Si el scroll es mayor al 80%, muestra el botón; de lo contrario, ocúltalo
+        if (scrollPosition > scrollTrigger) {
+            botonScroll.style.display = 'block';
+        } else {
+            botonScroll.style.display = 'none';
+        }
+    });
+});
+// fin botón de Scroll

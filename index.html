@@ -48,63 +48,59 @@
                 <div class="band-container">
                     <div class="band-inner">
                         <div class="card-container">
-                        <div class="card u-clearfix">
-                            <!-- card-body -->
-                            <div style="text-align: center;">
-                            <img src="images/assets/logo.png" alt="logo_universidad" width="60%" />
-                            </div>
-
-                            <div class="" style="display: flex;">
-                            <!-- div para el contenedor del perfil -->
-                            <div style="width: 50%;">
-                                <div style="text-align: center;">
-                                    <img src="images/assets/user.jpg" alt="Perfil" style="width: 35%; border-radius: 50%; box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);" />
-                                </div>
-                                <div style="margin-top: 10px;">
-                                    <p style="font-size: 1em; color: #77183a; font-weight: bold;">25-0871-2020 | CARNET</p>
-                                    <p style="font-size: 0.9em; color: #77183a; font-weight: bold; margin-top: 5px;">CUATRO RIVERA, FERRNANDO MIGUEL</p>
-                                    <p style="font-size: 0.9em; color: #77183a; font-weight: bold; margin-top: 5px;">Ingeniería en Sistemas y Computación</p>
-                                </div>
-                            </div>
-
-                            <!-- div para la información acerca e la carreras -->
-                            <div style="width: 50%;">
-                                <div>
-                                <p style="font-size: 0.8em; color: #77183a; font-weight: bold; margin-top: 5px; text-align: center; margin-bottom: 3px;">Con el apoyo de:</p>
-                                <div style="text-align: center;">
-                                    <img src="images/assets/chorizeria.jpg" alt="chorizeria" style="width: 40%; border-radius: 12px; box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);">
-                                </div>
-                                <h2 style="text-transform: uppercase; color: #77183a; text-align: center; margin-top: 5px;">¡Gracias a todos!</h2>
+                            <div class="card u-clearfix hero-contenido">
+                                <!-- card-body -->
+                                <div id="contenedor-logo-universidad" class="contenido-centrado">
+                                    <img src="images/assets/logo.png" alt="logo_universidad">
                                 </div>
 
-                                <div style="display: flex; width: 100%; height: 120px;">
-                                    <a href="https://fernandocuatro.github.io/portafolio/" target="_blank" rel="noopener noreferrer" style="flex: 1; height: 20px; text-align: center;">
-                                        <img src="images/assets/portafolio.png" alt="portafolio" style="width: 95%; border-radius: 10px 10px 0px 0px; height: 99px; object-fit: cover;">
-                                        <div style="display: flex; justify-content: center;">
-                                            <p style="width: 95%; background-color: #77183a; font-size: 0.6em; padding: 5px 0px; margin-top: -4px; border-radius: 0px 0px 10px 10px;"><i class="fas fa-external-link-alt"></i> PORTAFOLIO</p>
+                                <div id="contenedor-hero">
+                                    <!-- div para el contenedor del perfil -->
+                                    <div class="contenedores-hero">
+                                        <div id="imagen-perfil" class="contenido-centrado">
+                                            <img src="images/assets/user.jpg" alt="Perfil">
                                         </div>
-                                    </a>
-                                    <a href="pdf/pensum.pdf" target="_blank" rel="noopener noreferrer" style="flex: 1; height: 20px; text-align: center;">
-                                        <img src="images/assets/pensum.png" alt="portafolio" style="width: 95%; border-radius: 10px 10px 0px 0px; height: 99px; object-fit: cover; border-top: 1px solid #77183a; border-right: 1px solid #77183a; border-left: 1px solid #77183a;">
-                                        <div style="display: flex; justify-content: center;">
-                                            <p style="width: 95%; background-color: #77183a; font-size: 0.6em; padding: 5px 0px; margin-top: -4px; border-radius: 0px 0px 10px 10px;"><i class="fas fa-external-link-alt"></i> PENSUM</p>
+                                        <div id="textos-descripcion">
+                                            <p id="informacion-carnet">CARNET: 25-0871-2020</p>
+                                            <p class="informacion-personal">CUATRO RIVERA, FERRNANDO MIGUEL</p>
+                                            <p class="informacion-personal">Ingeniería en Sistemas y Computación</p>
                                         </div>
-                                    </a>
-                                    <a href="pdf/proyeccion.pdf" target="_blank" rel="noopener noreferrer" style="flex: 1; height: 20px; text-align: center;">
-                                        <img src="images/assets/proyeccion.png" alt="portafolio" style="width: 95%; border-radius: 10px 10px 0px 0px; height: 99px; object-fit: cover; border-top: 1px solid #77183a; border-right: 1px solid #77183a; border-left: 1px solid #77183a;">
-                                        <div style="display: flex; justify-content: center;">
-                                            <p style="width: 95%; background-color: #77183a; font-size: 0.6em; padding: 5px 0px; margin-top: -4px; border-radius: 0px 0px 10px 10px;"><i class="fas fa-external-link-alt"></i> PROYECCIÓN</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            
-                            </div>
+                                    </div>
 
+                                    <!-- div para la información acerca e la carreras -->
+                                    <div class="contenedores-hero">
+                                        <div>
+                                            <p id="con-apoyo">Con el apoyo de:</p>
+                                            <div id="apoyo" class="contenido-centrado">
+                                                <img src="images/assets/chorizeria.jpg" alt="chorizeria">
+                                            </div>
+                                            <h2 id="gracias">¡Gracias a todos!</h2>
+                                        </div>
+
+                                        <div id="contenedor-cards">
+                                            <a href="https://fernandocuatro.github.io/portafolio/" target="_blank" rel="noopener noreferrer" class="card-enlace">
+                                                <img src="images/assets/portafolio.png" alt="portafolio" id="img-portafolio">
+                                                <div class="card-descripcion">
+                                                    <p><i class="fas fa-external-link-alt"></i> PORTAFOLIO</p>
+                                                </div>
+                                            </a>
+                                            <a href="pdf/pensum.pdf" target="_blank" rel="noopener noreferrer" class="card-enlace">
+                                                <img src="images/assets/pensum.png" alt="pensum" class="img-pensums">
+                                                <div class="card-descripcion">
+                                                    <p><i class="fas fa-external-link-alt"></i> PENSUM</p>
+                                                </div>
+                                            </a>
+                                            <a href="pdf/proyeccion.pdf" target="_blank" rel="noopener noreferrer" class="card-enlace">
+                                                <img src="images/assets/proyeccion.png" alt="proyeccion" class="img-pensums">
+                                                <div class="card-descripcion">
+                                                    <p><i class="fas fa-external-link-alt"></i> PROYECCIÓN</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-
-                        
                     </div>
                 </div>
             </section>
@@ -114,34 +110,34 @@
             <section class="band band-e">
                 <div class="progreso">
                     <ol class="progress-bar" id="progress-bar">
-                    <li class="is-complete is-active"><span style="color: #fff;">01-2020</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">02-2020</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">01-2021</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">02-2021</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">01-2023</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">02-2023</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">01-2023</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">02-2023</span></li>
-                    <li class="is-complete is-active"><span style="color: #fff;">01-2024</span></li>
+                    <li class="is-complete is-active"><span>01-2020</span></li>
+                    <li class="is-complete is-active"><span>02-2020</span></li>
+                    <li class="is-complete is-active"><span>01-2021</span></li>
+                    <li class="is-complete is-active"><span>02-2021</span></li>
+                    <li class="is-complete is-active"><span>01-2023</span></li>
+                    <li class="is-complete is-active"><span>02-2023</span></li>
+                    <li class="is-complete is-active"><span>01-2023</span></li>
+                    <li class="is-complete is-active"><span>02-2023</span></li>
+                    <li class="is-complete is-active"><span>01-2024</span></li>
                     </ol>
 
-                    <p class="cum-general" id="inicio" style="text-align: right; color: #fff; padding: 0px;">CUM General: <span>9.1</span></p>
+                    <p class="cum-general" id="inicio">CUM General: <span>9.1</span></p>
                 </div>
             </section>
             <!-- FIN LINEA DE TIEMPO -->
 
             <!-- CARD DE CICLOS -->
-            <section class="band" style="padding: 1em 0px;">
-                <div style="display: flex; justify-content: end; margin: 0px 1em;">
+            <section class="band" id="contenedor-card-ciclos">
+                <div id="sort">
                     <button id="ordenarButton" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #77183a;"><path d="M11 9h9v2h-9zm0 4h7v2h-7zm0-8h11v2H11zm0 12h5v2h-5zm-6 3h2V8h3L6 4 2 8h3z"></path></svg>
                     </button>
                 </div>
                 
-                <div class="scroll-container" id="scrollContainer" style="display: flex; width: 100%; overflow-x: auto; white-space: nowrap; scroll-behavior: smooth;">
+                <div class="scroll-container" id="scrollContainer">
                     <!-- pre -->
-                    <a href="#" id="pre" style="text-decoration: none; margin: 10px 20px; pointer-events: none;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #FFF;">
+                    <a href="#" id="pre" class="card-desabilitada">
+                        <div class="card card-ciclo card-color-0">
                             <div class="date" style="font-size: 12px; color: #cccccc; margin-bottom: 10px; padding: 20px 20px 0px 20px;">2024 - 2025</div>
                             <div style="display: flex; width: 100%; text-align: center; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #cccccc; width: 100%;">Pre Especialización</h2>
@@ -162,8 +158,8 @@
                     </a>
 
                     <!-- 2024-01 #fff -->
-                    <a href="#header-2024" class="2024-01" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #f0e4fb;">
+                    <a href="#header-2024" class="2024-01">
+                        <div class="card card-ciclo card-color-2">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2024 - Junio 2024</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2024-01</h2>
@@ -186,8 +182,8 @@
                     </a>
 
                     <!-- 2023-02 #fff -->
-                    <a href="#header-02-2023" id="2023-02" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #c8f7dd;">
+                    <a href="#header-02-2023" id="2023-02">
+                        <div class="card card-ciclo card-color-3">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2023 - Diciembre 2023</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2023-02</h2>
@@ -212,8 +208,8 @@
                     </a>
 
                     <!-- 2023-01 #fff -->
-                    <a href="#header-2023" class="2023-01" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e6eaff;">
+                    <a href="#header-2023" class="2023-01">
+                        <div class="card card-ciclo card-color-4">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2023 - Julio 2023</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2023-01</h2>
@@ -237,8 +233,8 @@
                     </a>
 
                     <!-- 2022-02 #fff -->
-                    <a href="#header-02-2022" id="2022-02" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe99c;">
+                    <a href="#header-02-2022" id="2022-02">
+                        <div class="card card-ciclo card-color-1">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2022 - Diciembre 2022</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2022-02</h2>
@@ -263,8 +259,8 @@
                     </a>
                     
                     <!-- 2022-01 #fff -->
-                    <a href="#header-2022" class="2022-01" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe5e3;">
+                    <a href="#header-2022" class="2022-01">
+                        <div class="card card-ciclo card-color-5">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2022 - Julio 2022</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2022-01</h2>
@@ -289,8 +285,8 @@
                     </a>
 
                     <!-- 2021-02 -->
-                    <a href="#header-02-2021" id="2021-02" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #f2d9e1;">
+                    <a href="#header-02-2021" id="2021-02">
+                        <div class="card card-ciclo card-color-6">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2021 - Diciembre 2021</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2021-02</h2>
@@ -315,8 +311,8 @@
                     </a>
 
                     <!-- 2021-01 #fff -->
-                    <a href="#header-2021" class="2021-01" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #e6eaff;">
+                    <a href="#header-2021" class="2021-01">
+                        <div class="card card-ciclo card-color-4">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2021 - Julio 2021</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2021-01</h2>
@@ -341,8 +337,8 @@
                     </a>
 
                     <!-- 2020-02 -->
-                    <a href="#header-02-2020" id="2020-02" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #c8f7dd;">
+                    <a href="#header-02-2020" id="2020-02">
+                        <div class="card card-ciclo card-color-3">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Agosto 2020 - Diciembre 2020</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2020-02</h2>
@@ -367,8 +363,8 @@
                     </a>
 
                     <!-- 2020-01 -->
-                    <a href="#header-2020" class="2020-01" style="text-decoration: none; margin: 10px 20px;">
-                        <div class="card" style="width: 200px; padding: 0px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); position: relative; display: flex; flex-direction: column; align-items: center; background-color: #ffe99c;">
+                    <a href="#header-2020" class="2020-01">
+                        <div class="card card-ciclo card-color-1">
                             <div class="date" style="font-size: 12px; color: #34495E; margin-bottom: 10px; padding: 20px 20px 0px 20px;">Enero 2020 - Julio 2020</div>
                             <div style="display: flex; width: 100%; justify-content: space-between; padding: 0 20px;">
                                 <h2 style="margin: 0; font-size: 18px; color: #34495E;">2020-01</h2>
