@@ -86,11 +86,11 @@ function scrollAndReset(scrollContainer) {
     animateScroll(scrollContainer, offsetWidth, 2000);
 
     setTimeout(() => {
-        animateScroll(scrollContainer, 150, 2000);
+        animateScroll(scrollContainer, 0, 2000);
     }, 2500);
 }
 
-// Función para la curva de aceleración y desaceleración (ease-in-out)
+// Función para la curva de aceleración y desaceleración
 Math.easeInOutQuad = function (t, b, c, d) {
     t /= d / 2;
     if (t < 1) return c / 2 * t * t + b;
@@ -255,7 +255,7 @@ $('body').on('click', '#ViewMore03', function() {
 // fin 2021
 
 // 2020
-$("#ViewMore02").click(function() {
+$('body').on('click', '#ViewMore02', function() {
     var link    = $(this);
     var content = $('.moreview02');
 
@@ -272,7 +272,7 @@ $("#ViewMore02").click(function() {
     }
 });
 
-$("#ViewMore").click(function() {
+$('body').on('click', '#ViewMore', function() {
     var link    = $(this);
     var content = $('.moreview');
 
@@ -527,92 +527,37 @@ $('#2020-02').click(function(event) {
 });
 
 // fin enlaces para 2020
-
-
-
-
-
-
 // ============================================
 
+// ============================================
+// Para ordenar los ciclos del ultimo al primero y viceversa
+// Variable para controlar el estado del botón
+// Estado del botón
+var cambiarEstado = false;
 
+function ordenarCiclos() {
+    var svgIcon = document.querySelector('#ordenarButton svg');
+    var button  = document.getElementById('ordenarButton');
 
+    if (cambiarEstado) {
+        svgIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #77183a;"><path d="M11 9h9v2h-9zm0 4h7v2h-7zm0-8h11v2H11zm0 12h5v2h-5zm-6 3h2V8h3L6 4 2 8h3z"></path></svg>';
+        button.classList.remove('clicked');
+    } else {
+        svgIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #77183a; transform: ; msFilter:;"><path d="m6 20 4-4H7V4H5v12H2zm5-12h9v2h-9zm0 4h7v2h-7zm0-8h11v2H11zm0 12h5v2h-5z"></path></svg>';
+        button.classList.add('clicked');
+    }
 
+    // Reordenar los enlaces dentro del div
+    var scrollContainer = document.getElementById('scrollContainer');
+    var children = Array.from(scrollContainer.children);
+    children.reverse(); // Invertir el orden de los elementos
+    children.forEach(function(child) {
+        scrollContainer.appendChild(child); // Mover cada elemento al final del contenedor
+    });
 
+    // Actualizar el estado del botón
+    cambiarEstado = !cambiarEstado;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Para cada anio
-$(".anio").click(function() {
- var link = $('#estado-2020');
- var content = $('#2020');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === '2020 +') {
-  link.text('2020 -');
-  content.css('display', 'block');
- } else {
-  link.text('2020 +');
-  content.css('height', '0%');
- }
-});
-
-$(".anio-2").click(function() {
- var link = $('#estado-2021');
- var content = $('#2021');
- var separador = $('.separador-anios');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === '2021 +') {
-  link.text('2021 -');
-  content.css('display', 'block');
-  separador.css('border-bottom', 'none');
- } else {
-  link.text('2021 +');
-  content.css('height', '0%');
-  separador.css('border-bottom', '5px solid #77183a');
- }
-});
-
-$(".anio-3").click(function() {
- var link = $('#estado-2022');
- var content = $('#2022');
- var separador = $('.separador-anios');
- content.animate({
-  height: 'toggle'
- });
- if (link.text() === '2022 +') {
-  link.text('2022 -');
-  content.css('display', 'block');
-  separador.css('border-bottom', 'none');
- } else {
-  link.text('2022 +');
-  content.css('height', '0%');
-  separador.css('border-bottom', '5px solid #77183a');
- }
-});
-
-
-
-
-
-  
+// Evento clic al botón
+document.getElementById('ordenarButton').addEventListener('click', ordenarCiclos);
