@@ -98,16 +98,18 @@ Math.easeInOutQuad = function (t, b, c, d) {
     return -c / 2 * (t * (t - 2) - 1) + b;
 };
 
-// Utilizamos IntersectionObserver para detectar cuando el contenedor está en pantalla
 const scrollContainer = document.getElementById('scrollContainer');
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        // Verificamos si al menos el 50% del contenido está visible
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
             scrollAndReset(scrollContainer);
             // Dejamos de observar una vez ejecutado
             observer.unobserve(entry.target); 
         }
     });
+}, {
+    threshold: 0.5 // Al 50% de vista se ejecutará
 });
 
 observer.observe(scrollContainer);
