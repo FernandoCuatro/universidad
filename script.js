@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 
     // Disparamos click para el ciclo activo
-    $('.2024-01').trigger('click');
+    $('.pre').trigger('click');
 });
 // ============================================
 
@@ -294,11 +294,39 @@ $('body').on('click', '#ViewMore', function() {
 // ============================================
 
 // ============================================
+// Enlaces para la pre especailziacion
+$('.pre').click(function(event) {
+    event.preventDefault();
+
+    // ocultamos los demas contenidos
+    $('#header-2024').slideUp();
+    $('#header-2023').slideUp();
+    $('#header-2022').slideUp();
+    $('#header-2021').slideUp();
+    $('#header-2020').slideUp();
+
+    var content = $('#pre-especalizacion');
+    if (content.is(':hidden')) {
+        fetch('ciclos/pre.html')
+            .then(response => response.text())
+            .then(data => {
+                content.html(data);
+                content.slideDown();
+
+                setTimeout(() => {
+                    document.getElementById('pre-especalizacion').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            })
+            .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+});
+
 // enlaces para 2024
 $('.2024-01').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();
     $('#header-2021').slideUp();
@@ -326,6 +354,7 @@ $('.2023-01').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2022').slideUp();
     $('#header-2021').slideUp();
@@ -351,6 +380,7 @@ $('#2023-02').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2022').slideUp();
     $('#header-2021').slideUp();
@@ -378,6 +408,7 @@ $('.2022-01').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2021').slideUp();
@@ -403,6 +434,7 @@ $('#2022-02').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2021').slideUp();
@@ -430,6 +462,7 @@ $('.2021-01').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();
@@ -455,6 +488,7 @@ $('#2021-02').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();
@@ -482,6 +516,7 @@ $('.2020-01').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();
@@ -507,6 +542,7 @@ $('#2020-02').click(function(event) {
     event.preventDefault();
 
     // ocultamos los demas contenidos
+    $('#pre-especalizacion').slideUp();
     $('#header-2024').slideUp();
     $('#header-2023').slideUp();
     $('#header-2022').slideUp();

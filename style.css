@@ -284,6 +284,10 @@ html, body {
 	background: #9B5DE5;
 }
 
+.band-n {
+	background: #FFF;
+}
+
 @media screen and (max-width:980px) {
 	.l-page {
 		margin-left: 0;
@@ -1183,4 +1187,8 @@ p.cum-general span {
 
 .card-color-6 {
 	background-color: #f2d9e1;
+}
+
+.card-color-7 {
+	background-color: #ffff00;
 }
